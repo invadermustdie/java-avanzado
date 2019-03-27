@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppWild {
+
+    // ejecuta los genericos sin indicar el tipo de dato
+    // el tipo se ejecuta en tiempo de ejecucion
+    // carta comodin o sustituto
     public static void main(String[] args) {
+
         AppWild aw = new AppWild();
         Alumno alumno1 = new Alumno("Alejandro");
         Alumno alumno2 = new Alumno("Cece");
@@ -31,7 +36,7 @@ public class AppWild {
 //    private void listar(List<?> lista) {
 //        for (Object a : lista) {
 //            if (a instanceof Alumno)
-//                System.out.println(((Alumno)a).getNombre());
+//                System.out.println(K((Alumno)a).getNombre());
 //            else if(a instanceof Profesor)
 //                System.out.println(((Profesor)a).getNombre());
 //        }
@@ -51,12 +56,10 @@ public class AppWild {
         }
     }
 
-
     // no seindica el tipo
     private void listarUnBounded(List<?> lista) {
         for (Object persona: lista) {
             System.out.println(((Persona)persona).getNombre());
         }
     }
-
 }
